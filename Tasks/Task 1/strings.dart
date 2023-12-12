@@ -80,16 +80,19 @@ void drawBoard(int size){
   for (int i=0; i<size; i++){
     for (var j = 0; j < size; j++) {
       stdout.write(' ---');
-    }
+    }//-- OR--
+    //print(' ---'*size);
     stdout.write('\n');
     for (int j=0; j<size;j++){
       stdout.write('|   ');
-    }
+    }//-- OR --
+    //print('|   '*size+1);
     stdout.write('|\n');
   }
   for (var i = 0; i < size; i++) {
     stdout.write(' ---');
-  }
+  }//-- OR--
+  //print(' ---'*size);
 }
 
 void main () {
