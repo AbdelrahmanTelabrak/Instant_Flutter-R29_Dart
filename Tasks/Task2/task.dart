@@ -16,6 +16,7 @@ For numbers[3] = 16, there is no an integer 1 ≤ x ≤ 3, such that 4 * x = 16,
 
 For numbers[4] = 5, we can choose x = 1 because 5 * 1 = 5 and 1 ≤ 1 ≤ 3, so result[4] = true.
 ***************/
+import 'dart:io';
 
 bool equation(int left, int right, int x, int i){
   int result = (i+1)*x;
@@ -24,11 +25,20 @@ bool equation(int left, int right, int x, int i){
 
 void main(){
   List<int> input = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+  List<int> input2 = [];
+  print('Enter the size of the list:');
+  int listSize = int.parse(stdin.readLineSync()!);
+  int item;
+  print('Enter the items of the list:');
+  for (int i =0; i<listSize;i++){
+    item = int.parse(stdin.readLineSync()!);
+    input2.add(item);
+  }
   int left = 3, right = 50;
   List<bool> ans = [];
   //print(ans);
-  for(int i=0; i<input.length;i++){
-    if(equation(left, right, input[i], i))
+  for(int i=0; i<input2.length;i++){
+    if(equation(left, right, input2[i], i))
       ans.add(true);
     else
       ans.add(false);
