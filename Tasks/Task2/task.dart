@@ -34,7 +34,10 @@ void main(){
     item = int.parse(stdin.readLineSync()!);
     input2.add(item);
   }
-  int left = 3, right = 50;
+  print('Enter the left and right value:');
+  int left = int.parse(stdin.readLineSync()!);
+  int right = int.parse(stdin.readLineSync()!);
+
   List<bool> ans = [];
   //print(ans);
   for(int i=0; i<input2.length;i++){
