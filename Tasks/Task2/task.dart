@@ -18,9 +18,11 @@ For numbers[4] = 5, we can choose x = 1 because 5 * 1 = 5 and 1 ≤ 1 ≤ 3, so 
 ***************/
 import 'dart:io';
 
-bool equation(int left, int right, int x, int i){
-  int result = (i+1)*x;
-  return left<= result && result<=right;
+bool equation(int left, int right, int number, int i){
+  num x = (number/(i+1));
+  if(x%1>0)
+    return false;
+  return left<= x && x<=right;
 }
 
 void main(){
@@ -41,10 +43,7 @@ void main(){
   List<bool> ans = [];
   //print(ans);
   for(int i=0; i<input2.length;i++){
-    if(equation(left, right, input2[i], i))
-      ans.add(true);
-    else
-      ans.add(false);
+    ans.add(equation(left, right, input2[i], i));
   }
   print(ans);
 }
