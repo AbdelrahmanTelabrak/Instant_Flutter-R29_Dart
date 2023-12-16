@@ -20,5 +20,12 @@ void main(){
   print(funTask(str, color: 'Red', type:getType));
   print(funTask(str, color: 'Red', type:(str){
       //using indexOf()
+      if (str.indexOf('Admin') != -1)
+        return 'Admin';
+      else if (str.indexOf('User') != -1)
+        return 'User';
+      else if (str.indexOf('SuperAdmin') != -1)
+        return 'SuperAdmin';
+      
   }));
 }
