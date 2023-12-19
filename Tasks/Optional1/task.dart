@@ -31,10 +31,11 @@ Solution:
   incremeant left++ and decremeant right--
   print(b);
  */
-void main() {
-  var a = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+import 'dart:core'; 
+
+bool solve(List<int> a){
   int left = 0, right = a.length-1;
-  List<int> b = [];
+  List b = [];
   while (left<=right){
     b.add(a[left]);
     if (left != right)
@@ -42,4 +43,16 @@ void main() {
     left++;right--;
   }
   print(b);
+  for (var i = 1; i < b.length; i++) {
+    if (b[i]<b[i-1])
+      return false;
+  }
+  return true;
+}
+void main() {
+  var a = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+  print(solve(a));
+  a.clear();
+  a = [1, 3, 5, 6, 4, 2];
+  print(solve(a));
 }
