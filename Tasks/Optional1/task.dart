@@ -51,6 +51,7 @@ bool solve(List<int> a){
 }
 void main() {
   var a = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+  //to get the max or min element in a list use list.reduce((value, element)=> value>element?value:element)
   print(solve(a));
   a.clear();
   a = [1, 3, 5, 6, 4, 2];
