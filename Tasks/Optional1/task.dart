@@ -44,13 +44,11 @@ bool solve(List<int> a){
     left++;right--;
   }
   print(b);
-  // for (var i = 1; i < b.length; i++) {
-  //   if (b[i]<b[i-1])
-  //     return false;
-  // }
-  //using every:
-  bool isSorted = b.every((element) => element>=b[0]);
-  return isSorted;
+  for (var i = 1; i < b.length; i++) {
+    if (b[i]<b[i-1])
+      return false;
+  }
+  return true;
 }
 void main() {
   var a = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
