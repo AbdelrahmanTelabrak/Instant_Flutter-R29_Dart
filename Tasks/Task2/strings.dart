@@ -22,9 +22,9 @@ Create a function that takes a string as input and returns the number of vowels 
 ***************/
 
 int vowels(String str){
-  var vowels = ['a', 'e', 'i', 'o', 'u'];
+  var vowels = 'aeiou';
   int vCount =0;
-  for (var itr in str.split('')) {
+  for (var itr in str.toLowerCase().split('')) {
     if(vowels.contains(itr))
       vCount++;
   }

@@ -32,6 +32,7 @@ Solution:
   print(b);
  */
 import 'dart:core'; 
+import 'dart:collection';
 
 bool solve(List<int> a){
   int left = 0, right = a.length-1;
@@ -43,17 +44,19 @@ bool solve(List<int> a){
     left++;right--;
   }
   print(b);
-  for (var i = 1; i < b.length; i++) {
-    if (b[i]<b[i-1])
-      return false;
-  }
-  return true;
+  // for (var i = 1; i < b.length; i++) {
+  //   if (b[i]<b[i-1])
+  //     return false;
+  // }
+  //using every:
+  bool isSorted = b.every((element) => element>=b[0]);
+  return isSorted;
 }
 void main() {
   var a = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
   //to get the max or min element in a list use list.reduce((value, element)=> value>element?value:element)
   print(solve(a));
-  a.clear();
+  // a.clear();
   a = [1, 3, 5, 6, 4, 2];
   print(solve(a));
 }
