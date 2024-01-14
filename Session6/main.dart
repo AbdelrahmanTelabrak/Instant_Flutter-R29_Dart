@@ -1,4 +1,3 @@
-import 'dart:io';
 
 String algo6(String name){
   String greetings = 'Hello, $name!';

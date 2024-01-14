@@ -32,7 +32,6 @@ Solution:
   print(b);
  */
 import 'dart:core'; 
-import 'dart:collection';
 
 bool solve(List<int> a){
   int left = 0, right = a.length-1;
